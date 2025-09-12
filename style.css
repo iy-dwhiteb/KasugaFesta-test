@@ -390,8 +390,9 @@ header {
 .slide-wrapper2 {
   display: flex;
   height: 300px;
-  animation: slide-flow2 30s linear infinite; /* ゆっくり動かす */
+  animation: slide-flow2 30s linear infinite; /* 左から右へ動く */
 }
+
 
 @keyframes slide-flow2 {
   0% {transform: translateX(-50%);}
