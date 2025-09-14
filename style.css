@@ -362,6 +362,11 @@ header {
   }
 }
 
+#foto{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .slide-container {
     width: 100%;
     margin: 50px auto;
@@ -369,56 +374,25 @@ header {
     align-items: center;
     overflow: hidden;
 }
-
+.slide-wrapper {
+  display: flex;
+  animation: slide-flow 30s infinite linear 1s both;
+}
 .slide{
+  width: 400px;
   object-fit:cover;
   border: 1px solid #ddd;
 }
-
-.slide-wrapper {
-  display: flex;
-  height: 300px;
-  animation: slide-flow 30s linear infinite; /* ゆっくり動かす */
-}
-
 @keyframes slide-flow {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); } /* 画像を2回並べたので半分だけ動かす */
+     0% {transform: translateX(0);}
+ 100% {transform: translateX(-100%);}
 }
 
-/*区切り*/
-.slide-wrapper2 {
-  display: flex;
-  height: 300px;
-  animation: slide-flow2 30s linear infinite; /* 左から右へ動く */
+@media screen and (max-width: 500px){ 
+.slide{
+  width: 250px;
 }
-
-
-@keyframes slide-flow2 {
-  0% {transform: translateX(-50%);}
-  100% {transform: translateX(0%);}
 }
-
-#foto{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-@media screen and (max-width: 600px) {
-  .slide-wrapper {
-    height: 200px;         /* 小さめに */
-    animation-duration: 40s; /* ゆっくり */
-  }
-    .slide-wrapper2 {
-    height: 200px;         /* 小さめに */
-    animation-duration: 40s; /* ゆっくり */
-  }
-  .slide {
-    width: auto;
-    height: 100%;
-  }
-}
-
 
 /*よくある質問*/
 .qa-6 {
